@@ -13,7 +13,7 @@ app.get('/', function(req, res) {
 })
 
 app.post('/process_post', function(req, res) {
-	const phone = req.body.phone;
+	const phone = "1" + req.body.phone;
 	res.setHeader("content-type", "text/html");
 	res.write("<p> Working on it... </p>");
 	actions.start(req).then(function(response) {
