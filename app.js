@@ -12,7 +12,7 @@ app.get('/', function(req, res) {
 	res.sendFile( __dirname + "/public/" + "index.html" );
 })
 
-app.post('/process_post', function(req, res) {
+app.post('/', function(req, res) {
 	const phone = "1" + req.body.phone;
 	res.setHeader("content-type", "text/html");
 	res.write("<p> Working on it... </p>");
