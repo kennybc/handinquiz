@@ -17,8 +17,5 @@
     "express": "^4.17.3",
     "webdriver": "^7.19.0",
     "webdriverio": "^7.19.0"
-  },
-  "devDependencies": {
-    "eslint": "^8.11.0"
   }
 }
