@@ -8,9 +8,7 @@
   },
   "scripts": {
     "start": "node ./app.js",
-    "test": "jest",
-    "build": "tsc",
-    "lint": "eslint"
+    "lint": "eslint --ignore-path .gitignore .",
   },
   "author": "",
   "license": "ISC",
@@ -20,5 +18,8 @@
     "express": "^4.17.3",
     "webdriver": "^7.19.0",
     "webdriverio": "^7.19.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.11.0"
   }
 }
