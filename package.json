@@ -1,0 +1,21 @@
+{
+  "name": "handinquiz",
+  "version": "1.0.0",
+  "description": "Autochecker for Handin server lab quizzes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "test": "jest",
+    "build": "tsc",
+    "lint": "eslint"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vonage/server-sdk": "^2.10.11",
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "webdriver": "^7.19.0",
+    "webdriverio": "^7.19.0"
+  }
+}
