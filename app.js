@@ -21,7 +21,7 @@ app.post('/', function(req, res) {
 		if (typeof response === "string") {
 			res.end("<p> " + response + " </p>")
 		} else {
-			const attempts = setInterval(function() {
+			function attempt() {
 				actions.attempt(response).then(function(new_response) {
 					if (new_response == 1) {
 						res.end("<p> Quiz submitted successfully </p>");
@@ -35,7 +35,9 @@ app.post('/', function(req, res) {
 						clearInterval(attempts);
 					}
 				});
-			}, 120000);
+			}
+			const attempts = setInterval(attempt, 120000);
+			attempt();
 			setTimeout(function() {
 				sms.text(phone, "Quiz has not opened after 2 hours, your request has timed out ");
 				clearInterval(attempts);
