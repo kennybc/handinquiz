@@ -28,14 +28,14 @@ app.post('/', function(req, res) {
 						sms.text(phone, "Quiz submitted successfully ");
 						clearInterval(attempts);
 					} else if (new_response == 0){
-						res.write("<p> Quiz has not opened yet </p>");
+						res.write("<p> Quiz has not opened yet, trying again in 2 minutes </p>");
 					} else if (new_response == 2) {
 						res.end("<p> Quiz is not just a check-in </p>");
 						sms.text(phone, "Quiz is not just a check-in ");
 						clearInterval(attempts);
 					}
 				});
-			}, 1000);
+			}, 120000);
 			setTimeout(function() {
 				sms.text(phone, "Quiz has not opened after 2 hours, your request has timed out ");
 				clearInterval(attempts);
